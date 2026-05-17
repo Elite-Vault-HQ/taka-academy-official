@@ -4,58 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>فريق تاكا | TAKA TEAM</title>
-    
-    <!-- SEO & Social Meta Tags -->
-    <meta name="description" content="فريق تاكا - السيادة والوفاء منذ 2015 | انضم لأقوى فريق في أنمي باور">
-    <meta property="og:title" content="فريق تاكا | TAKA TEAM - منذ 2015">
-    <meta property="og:description" content="السيادة والوفاء - انضم لأقوى فريق في أنمي باور">
-    <meta property="og:image" content="https://e.top4top.io/p_1451f2b9r1.png">
-    <meta property="og:url" content="https://takateam.com">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#ff6a00">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Cairo:wght@400;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://e.top4top.io/p_1451f2b9r1.png" as="image">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Cairo:wght@400;700;900&display=swap"></noscript>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="manifest" href="data:application/manifest+json,{
-        'name': 'TAKA TEAM',
-        'short_name': 'تaka',
-        'theme_color': '#ff6a00',
-        'background_color': '#050505',
-        'display': 'standalone',
-        'icons': [{'src': 'https://e.top4top.io/p_1451f2b9r1.png', 'sizes': '192x192', 'type': 'image/png'}]
-    }">
     
     <style>
         :root {
-            --primary: #ff6a00;
-            --secondary: #00d4ff;
-            --honor-gold: #ffcc00;
+            --primary: #ff6a00; /* برتقالي تاكا */
+            --secondary: #00d4ff; /* لون أقسام المهام */
+            --honor-gold: #ffcc00; /* لون لوحة الشرف */
             --bg: #050505;
             --glass: rgba(255, 255, 255, 0.03);
             --glass-border: rgba(255, 255, 255, 0.1);
         }
 
-        * {
-            box-sizing: border-box;
-        }
-
-                        body {
+        body {
             margin: 0;
             font-family: 'Cairo', sans-serif;
-            /* الرابط المباشر الجديد والنهائي للصورة */
+            /* كود الخلفية بالرابط العالمي السريع والمجرب */
             background: linear-gradient(rgba(5, 5, 5, 0.85), rgba(5, 5, 5, 0.85)), url('https://images2.imgbox.com/71/6f/M68i8VpZ_o.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
             min-height: 100vh;
             overflow-x: hidden;
             scroll-behavior: smooth;
-                        }
-        
+        }
 
         /* رأس الصفحة */
         .hero { 
@@ -68,23 +40,18 @@
             filter: drop-shadow(0 0 20px var(--primary)); 
             margin-bottom: 15px; 
             border-radius: 20px;
-            transition: transform 0.3s ease;
-        }
-        .hero img:hover {
-            transform: scale(1.05);
         }
         .hero h1 {
             font-family: 'Outfit', sans-serif;
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: 3rem;
             margin: 0;
             letter-spacing: 3px;
             background: linear-gradient(to bottom, #fff, var(--primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
-        /* أزرار التنقل */
+        /* أزرار التنقل (الخانات الثلاث) */
         .nav-tabs {
             position: sticky;
             top: 20px;
@@ -113,77 +80,26 @@
             gap: 5px;
             backdrop-filter: blur(15px);
             font-size: 0.85rem;
-            position: relative;
-            overflow: hidden;
         }
 
-        .tab-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
+        /* تمييز الخانات بألوان مختلفة */
+        .tab-btn:nth-child(1).active { background: var(--primary); color: #000; box-shadow: 0 0 20px var(--primary); border-color: var(--primary); }
+        .tab-btn:nth-child(2).active { background: var(--secondary); color: #000; box-shadow: 0 0 20px var(--secondary); border-color: var(--secondary); }
+        .tab-btn:nth-child(3).active { background: var(--honor-gold); color: #000; box-shadow: 0 0 20px var(--honor-gold); border-color: var(--honor-gold); }
 
-        .tab-btn:hover::before {
-            left: 100%;
-        }
-
-        /* تمييز الخانات */
-        .tab-btn:nth-child(1).active { 
-            background: var(--primary); 
-            color: #000; 
-            box-shadow: 0 0 20px var(--primary); 
-            border-color: var(--primary); 
-        }
-        .tab-btn:nth-child(2).active { 
-            background: var(--secondary); 
-            color: #000; 
-            box-shadow: 0 0 20px var(--secondary); 
-            border-color: var(--secondary); 
-        }
-        .tab-btn:nth-child(3).active { 
-            background: var(--honor-gold); 
-            color: #000; 
-            box-shadow: 0 0 20px var(--honor-gold); 
-            border-color: var(--honor-gold); 
-        }
-
-        .container { 
-            max-width: 900px; 
-            margin: auto; 
-            padding: 0 20px 50px 20px; 
-        }
+        .container { max-width: 900px; margin: auto; padding: 0 20px 50px 20px; }
 
         /* الأقسام */
         .content-section {
             display: none;
             animation: slideIn 0.5s ease forwards;
-            min-height: 400px;
         }
 
-        .content-section.active { 
-            display: block; 
-        }
-
-        .content-section.loading {
-            opacity: 0.7;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            background-size: 200% 100%;
-            animation: loading 1.5s infinite;
-        }
+        .content-section.active { display: block; }
 
         @keyframes slideIn {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes loading {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
         }
 
         .card {
@@ -193,22 +109,9 @@
             border-radius: 25px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             line-height: 1.8;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.7);
-        }
-
-        h2 { 
-            color: var(--primary); 
-            border-bottom: 1px solid #333; 
-            padding-bottom: 15px; 
-            margin-top: 0; 
-            font-size: 1.8rem;
-        }
+        h2 { color: var(--primary); border-bottom: 1px solid #333; padding-bottom: 15px; margin-top: 0; }
 
         /* لوحة الشرف */
         .honor-grid {
@@ -226,20 +129,6 @@
             font-size: 0.9rem;
             border: 1px solid transparent;
             transition: 0.3s;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .honor-name::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--honor-gold);
-            transition: width 0.3s ease;
         }
 
         .honor-name:hover {
@@ -249,17 +138,12 @@
             background: rgba(255, 204, 0, 0.05);
         }
 
-        .honor-name:hover::after {
-            width: 100%;
-        }
-
         .memorial {
             border: 1px solid #ff4d4d;
             background: rgba(255, 77, 77, 0.05);
             padding: 20px;
             border-radius: 15px;
             margin: 25px 0;
-            backdrop-filter: blur(10px);
         }
 
         .btn-link {
@@ -274,168 +158,43 @@
             font-weight: bold;
             margin-top: 20px;
             transition: 0.3s;
-            position: relative;
-            overflow: hidden;
         }
 
-        .btn-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
-        }
+        .btn-link:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--primary); }
 
-        .btn-link:hover { 
-            transform: scale(1.05); 
-            box-shadow: 0 0 20px var(--primary); 
-        }
+        footer { text-align: center; padding: 40px; color: #555; font-size: 0.8rem; border-top: 1px solid #111; }
 
-        .btn-link:hover::before {
-            left: 100%;
-        }
-
-        footer { 
-            text-align: center; 
-            padding: 40px; 
-            color: #555; 
-            font-size: 0.9rem; 
-            border-top: 1px solid #111; 
-            margin-top: 50px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-tabs {
-                flex-direction: column;
-                gap: 10px;
-                padding: 0 10px;
-                max-width: 400px;
-            }
-            
-            .tab-btn {
-                padding: 14px 10px;
-                font-size: 0.9rem;
-            }
-            
-            .hero { 
-                padding: 40px 0 20px 0; 
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .card {
-                padding: 25px 20px;
-            }
-            
-            .container { 
-                padding: 0 15px 40px 15px; 
-            }
-        }
-
-        @media (max-width: 480px) {
-            .nav-tabs { 
-                gap: 8px; 
-                margin: 20px auto; 
-                max-width: 350px;
-            }
-            
-            .hero { 
-                padding: 30px 0 15px 0; 
-            }
-            
-            .hero img { 
-                width: 100px; 
-            }
-            
-            .container { 
-                padding: 0 10px 30px 10px; 
-            }
-            
-            .honor-grid {
-                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-                gap: 10px;
-            }
-        }
-
-        /* Focus styles for accessibility */
-        .tab-btn:focus,
-        .honor-name:focus,
-        .btn-link:focus {
-            outline: 2px solid var(--primary);
-            outline-offset: 2px;
-        }
-
-        /* Animations */
-        @keyframes fadeInDown { 
-            from { opacity: 0; transform: translateY(-20px); } 
-            to { opacity: 1; transform: translateY(0); } 
-        }
-
-        /* Scroll progress bar */
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            z-index: 10000;
-            transition: width 0.3s ease;
-        }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
-    <!-- Scroll Progress Bar -->
-    <div class="progress-bar" id="progressBar"></div>
-
     <div class="hero">
-        <img src="https://e.top4top.io/p_1451f2b9r1.png" alt="شعار فريق تاكا | TAKA TEAM" loading="eager">
+        <img src="https://e.top4top.io/p_1451f2b9r1.png" alt="TAKA TEAM">
         <h1>TAKA TEAM</h1>
-        <p style="color: #888; font-size: 1.1rem;">منذ 2015 | السيادة والوفاء</p>
+        <p style="color: #888;">منذ 2015 | السيادة والوفاء</p>
     </div>
 
-    <div class="nav-tabs" role="tablist">
-        <button class="tab-btn active" 
-                onclick="openTab(event, 'history')"
-                aria-controls="history" 
-                aria-selected="true"
-                role="tab"
-                tabindex="0">
-            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+    <div class="nav-tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'history')">
+            <i class="fa-solid fa-book-open"></i>
             تاريخ الفريق
         </button>
-        <button class="tab-btn" 
-                onclick="openTab(event, 'academy')"
-                aria-controls="academy" 
-                aria-selected="false"
-                role="tab"
-                tabindex="-1">
-            <i class="fa-solid fa-shuttle-space" aria-hidden="true"></i>
+        <button class="tab-btn" onclick="openTab(event, 'academy')">
+            <i class="fa-solid fa-shuttle-space"></i>
             الأكاديمية
         </button>
-        <button class="tab-btn" 
-                onclick="openTab(event, 'honor')"
-                aria-controls="honor" 
-                aria-selected="false"
-                role="tab"
-                tabindex="-1">
-            <i class="fa-solid fa-crown" aria-hidden="true"></i>
+        <button class="tab-btn" onclick="openTab(event, 'honor')">
+            <i class="fa-solid fa-crown"></i>
             لوحة الشرف
         </button>
     </div>
 
     <div class="container">
 
-        <div id="history" class="content-section active" role="tabpanel">
+        <div id="history" class="content-section active">
             <div class="card">
-                <h2><i class="fa-solid fa-history" aria-hidden="true"></i> مَلحمة فريق تاكا (2015 - 2026)</h2>
+                <h2><i class="fa-solid fa-history"></i> مَلحمة فريق تاكا (2015 - 2026)</h2>
                 <h3 style="color: var(--primary);">⚔️ البداية: من رحم التحدي</h3>
                 <p>في نوفمبر 2014، ولدت شرارة التحدي لدى <span style="color:var(--primary)">المؤسس جراي</span>. بعد موقف أثبت فيه أن المسؤولية تُنتزع بالعمل لا بالمنصب، قرر تأسيس كيانه الخاص.</p>
                 <p>في <span style="color:var(--primary)">18 يناير 2015</span>، وُضع حجر الأساس لـ <strong>فريق تاكا</strong>. وبفضل التفاعل الاستثنائي، تم ترسيم الفريق رسمياً في 25 يناير 2015، ليصبح أسرع فريق ينال الاعتراف في تاريخ المجموعة.</p>
@@ -444,7 +203,7 @@
                 <p>قام الفريق على أكتاف نخبة مخلصة: <strong>المؤسس جراي</strong> كروح قيادية، و <strong>رانيا وفارس</strong> كذراعي جراي اللذين بذلا المستحيل لتثبيت أركان الفريق في أصعب الظروف.</p>
 
                 <div class="memorial">
-                    <h4 style="color: #ff4d4d; margin: 0 0 10px 0;"><i class="fa-solid fa-heart" aria-hidden="true"></i> ذكرى الوفاء: "سامي" رحمه الله</h4>
+                    <h4 style="color: #ff4d4d; margin: 0 0 10px 0;"><i class="fa-solid fa-heart"></i> ذكرى الوفاء: "سامي" رحمه الله</h4>
                     <p style="margin:0; font-size: 0.95rem;">كان حارس الأمان للتاكا وأطيب من عرفهم الفريق. وفاته في 17 أكتوبر 2016 كانت المحطة الأصعب في تاريخنا، لكن ذكراه بقيت وقوداً لاستمرارنا.</p>
                 </div>
 
@@ -453,42 +212,37 @@
             </div>
         </div>
 
-        <div id="academy" class="content-section" role="tabpanel">
+        <div id="academy" class="content-section">
             <div class="card" style="border-color: var(--secondary);">
-                <h2 style="color: var(--secondary);"><i class="fa-solid fa-star" aria-hidden="true"></i> مهام أكاديمية تاكا</h2>
+                <h2 style="color: var(--secondary);"><i class="fa-solid fa-star"></i> مهام أكاديمية تاكا</h2>
                 <p>الأكاديمية هي بوابتك لتصبح فرداً من عائلتنا. لديك <span style="color:var(--secondary)">48 ساعة</span> لإثبات جديتك عبر المهام التالية:</p>
                 <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom:15px;"><i class="fa-solid fa-check-circle" style="color:var(--secondary)" aria-hidden="true"></i> التعليق ببياناتك (الاسم، العمر، البلد، الكود) في المنشور الرسمي.</li>
-                    <li style="margin-bottom:15px;"><i class="fa-solid fa-check-circle" style="color:var(--secondary)" aria-hidden="true"></i> وضع شعار الأكاديمية الرسمي في حسابك.</li>
-                    <li style="margin-bottom:15px;"><i class="fa-solid fa-check-circle" style="color:var(--secondary)" aria-hidden="true"></i> نشر منشورين و20 تعليق في "أنمي باور".</li>
-                    <li><i class="fa-solid fa-check-circle" style="color:var(--secondary)" aria-hidden="true"></i> القيام بـ 20 دعوة للمجموعة لتعزيز قوة الفريق.</li>
+                    <li style="margin-bottom:15px;"><i class="fa-solid fa-check-circle" style="color:var(--secondary)"></i> التعليق ببياناتك (الاسم، العمر، البلد، الكود) في المنشور الرسمي.</li>
+                    <li style="margin-bottom:15px;"><i class="fa-solid fa-check-circle" style="color:var(--secondary)"></i> وضع شعار الأكاديمية الرسمي في حسابك.</li>
+                    <li style="margin-bottom:15px;"><i class="fa-solid fa-check-circle" style="color:var(--secondary)"></i> نشر منشورين و20 تعليق في "أنمي باور".</li>
+                    <li><i class="fa-solid fa-check-circle" style="color:var(--secondary)"></i> القيام بـ 20 دعوة للمجموعة لتعزيز قوة الفريق.</li>
                 </ul>
-                <a href="https://www.facebook.com/groups/196165084560777/permalink/988636241980320/" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="btn-link" 
-                   style="background:var(--secondary)"
-                   aria-label="الانتقال للمنشور الرسمي على فيسبوك">
-                    انتقل للمنشور الرسمي <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                <a href="https://www.facebook.com/groups/196165084560777/permalink/988636241980320/" target="_blank" class="btn-link" style="background:var(--secondary)">
+                    انتقل للمنشور الرسمي <i class="fa-brands fa-facebook"></i>
                 </a>
             </div>
         </div>
 
-        <div id="honor" class="content-section" role="tabpanel">
+        <div id="honor" class="content-section">
             <div class="card" style="border-color: var(--honor-gold);">
-                <h2 style="color: var(--honor-gold);"><i class="fa-solid fa-medal" aria-hidden="true"></i> سجل شرف قادة تاكا</h2>
+                <h2 style="color: var(--honor-gold);"><i class="fa-solid fa-medal"></i> سجل شرف قادة تاكا</h2>
                 <p>نخبة من الأسماء التي ساهمت في بناء وقيادة فريق تاكا عبر السنين:</p>
                 <div class="honor-grid">
-                    <div class="honor-name" tabindex="0">جراي</div><div class="honor-name" tabindex="0">رانيا</div><div class="honor-name" tabindex="0">فارس</div>
-                    <div class="honor-name" tabindex="0">وسام</div><div class="honor-name" tabindex="0">لاريسا</div><div class="honor-name" tabindex="0">شادو</div>
-                    <div class="honor-name" tabindex="0">ميناتو</div><div class="honor-name" tabindex="0">هاروهيرو</div><div class="honor-name" tabindex="0">حمزة</div>
-                    <div class="honor-name" tabindex="0">أوزكس</div><div class="honor-name" tabindex="0">رياكو</div><div class="honor-name" tabindex="0">نينا</div>
-                    <div class="honor-name" tabindex="0">بان</div><div class="honor-name" tabindex="0">أرهان</div><div class="honor-name" tabindex="0">مسعود</div>
-                    <div class="honor-name" tabindex="0">كاسبر</div><div class="honor-name" tabindex="0">برون</div><div class="honor-name" tabindex="0">عبد الله</div>
-                    <div class="honor-name" tabindex="0">كريم</div><div class="honor-name" tabindex="0">مهند</div><div class="honor-name" tabindex="0">أشرف</div>
-                    <div class="honor-name" tabindex="0">موشوكو</div><div class="honor-name" tabindex="0">ورد</div><div class="honor-name" tabindex="0">مايسترو</div>
-                    <div class="honor-name" tabindex="0">عمرو</div><div class="honor-name" tabindex="0">شارك</div><div class="honor-name" tabindex="0">سينسي</div>
-                    <div class="honor-name" tabindex="0">محمد</div><div class="honor-name" tabindex="0">حنين</div>
+                    <div class="honor-name">جراي</div><div class="honor-name">رانيا</div><div class="honor-name">فارس</div>
+                    <div class="honor-name">وسام</div><div class="honor-name">لاريسا</div><div class="honor-name">شادو</div>
+                    <div class="honor-name">ميناتو</div><div class="honor-name">هاروهيرو</div><div class="honor-name">حمزة</div>
+                    <div class="honor-name">أوزكس</div><div class="honor-name">رياكو</div><div class="honor-name">نينا</div>
+                    <div class="honor-name">بان</div><div class="honor-name">أرهان</div><div class="honor-name">مسعود</div>
+                    <div class="honor-name">كاسبر</div><div class="honor-name">برون</div><div class="honor-name">عبد الله</div>
+                    <div class="honor-name">كريم</div><div class="honor-name">مهند</div><div class="honor-name">أشرف</div>
+                    <div class="honor-name">موشوكو</div><div class="honor-name">ورد</div><div class="honor-name">مايسترو</div>
+                    <div class="honor-name">عمرو</div><div class="honor-name">شارك</div><div class="honor-name">سينسي</div>
+                    <div class="honor-name">محمد</div><div class="honor-name">حنين</div>
                 </div>
             </div>
         </div>
@@ -501,83 +255,19 @@
     </footer>
 
     <script>
-        // وظيفة التنقل بين الخانات مع الدعم الكامل للوصولية
         function openTab(evt, tabName) {
             var i, content, tablinks;
-            
-            // إضافة تأثير التحميل
-            const targetSection = document.getElementById(tabName);
-            targetSection.classList.add('loading');
-            
-            // إخفاء كل الأقسام
             content = document.getElementsByClassName("content-section");
             for (i = 0; i < content.length; i++) {
                 content[i].classList.remove("active");
             }
-            
-            // إزالة حالة "النشط" من كل الأزرار
             tablinks = document.getElementsByClassName("tab-btn");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
-                tablinks[i].setAttribute('aria-selected', 'false');
-                tablinks[i].setAttribute('tabindex', '-1');
             }
-            
-            // إظهار القسم المطلوب وتفعيل الزر الخاص به
-            setTimeout(() => {
-                targetSection.classList.add("active");
-                targetSection.classList.remove('loading');
-            }, 300);
-            
+            document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
-            evt.currentTarget.setAttribute('aria-selected', 'true');
-            evt.currentTarget.setAttribute('tabindex', '0');
-            evt.currentTarget.focus();
-            
-            // العودة لأعلى الحاوية
             window.scrollTo({ top: 200, behavior: 'smooth' });
-        }
-
-        // شريط تقدم التمرير
-        window.addEventListener('scroll', () => {
-            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            document.getElementById('progressBar').style.width = scrolled + '%';
-        });
-
-        // دعم لوحة المفاتيح للتنقل بين الخانات
-        document.addEventListener('keydown', (e) => {
-            const activeTab = document.querySelector('.tab-btn[aria-selected="true"]');
-            const tabs = document.querySelectorAll('.tab-btn');
-            const currentIndex = Array.from(tabs).indexOf(activeTab);
-            
-            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-                e.preventDefault();
-                const nextIndex = e.key === 'ArrowLeft' ? 
-                    (currentIndex - 1 + tabs.length) % tabs.length : 
-                    (currentIndex + 1) % tabs.length;
-                tabs[nextIndex].click();
-            }
-        });
-
-        // PWA Service Worker (اختياري)
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('data:text/javascript;base64,' + btoa(`
-                    self.addEventListener('install', e => {
-                        self.skipWaiting();
-                    });
-                    self.addEventListener('activate', e => {
-                        self.clients.claim();
-                    });
-                `));
-            });
-        }
-
-        // تحسين الأداء - تحميل كسول للصور
-        if ('loading' in HTMLImageElement.prototype) {
-            document.querySelectorAll('img[loading]').forEach(img => {
-                img.loading = 'lazy';
-            });
         }
     </script>
 
